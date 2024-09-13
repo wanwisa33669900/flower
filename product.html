@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="#" class="logo">flower <span></span></a>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="#Best">Best seller</a>
+        <a href="#new">New</a>
+        <a href="#flowers">Flowers</a>
+        <!-- ปุ่มเปิด Modal -->
+ <button id="open-search" class="open-search-btn">Search...</button>
+
+ <!-- Search Modal -->
+ <div class="search flex-c-m trans-04 js-hide-modal-search" id="search-modal">
+     <div class="container-search">
+         <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search" id="close-search">
+             <img src="images/icon/icon-close2.png" alt="CLOSE">
+         </button>
+
+         <form class="Plus flex-w p-l-15">
+             <button class="flex-c-m trans-04">
+                 <i class="plus-search"></i>
+             </button>
+             <input class="plus3" type="text" name="search" placeholder="Search...">
+         </form>
+     </div>
+ </div>
+
+<br>
+
+ <script>
+     // ฟังก์ชันเปิด-ปิด modal
+     const openSearchBtn = document.getElementById('open-search');
+     const searchModal = document.getElementById('search-modal');
+     const closeSearchBtn = document.getElementById('close-search');
+
+     openSearchBtn.addEventListener('click', () => {
+         searchModal.classList.add('active');
+     });
+
+     closeSearchBtn.addEventListener('click', () => {
+         searchModal.classList.remove('active');
+     });
+ </script>
+
+    </nav>
+    <div class="icon">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="login.html" class="fas fa-user"></a>
+    </div>
+
+
+    <!-- Include JavaScript file -->
+    <script src="js/script.js"></script>
+
+</header>
+
+
+
+<!-- ------------------------------------------------------------------------- -->
+<section class="products" id="products">
+
+    <h1 class="heading"> Best  <span>seller</span> </h1>
+
+    <div class="box-container">
+
+<!-- -------------------------มีเฉยๆไม่มีประโยชน์------------------------------------------------ -->       
+    
+<!-- <button onclick="scrollToSection('new')">New Arrivals</button> ไม่เอาแล้ว
+<button onclick="scrollToSection('flowers')">Flowers</button>> -->
+
+ 
+
+<!-- <div class="content">
+    <p class="searchable">This is a flower pot description.</p>
+    <p class="searchable">Beautiful lily flowers for your home.</p>
+    <p class="searchable">Poppy flowers available in many colors.</p>
+    <p class="searchable">Austin flower variety with vibrant colors.</p>
+</div> -->
+
+
+<section class="Best" id="Best">
+
+    <h1 class="heading"> Best <span>seller</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/n8.jpg" alt="Best Seller 1">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Apricot blossom</h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/sf1.2.jpg" alt="Best Seller 2">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Snowdrop</h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/sf1.3.jpg" alt="Best Seller 3">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Azalea</h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/sf11.jpg">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cactus </h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/sf10.jpg" alt="Best Seller 5">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Camellia</h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/sf6.jpg" alt="Best Seller 6">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Chamomile</h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/sf7.jpg" alt="Best Seller 7">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Campanula</h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Hot!</span>
+            <div class="image">
+                <img src="images/sf/sf8.jpg" alt="Best Seller 8">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Campanula</h3>
+                <div class="price"> 1299.- <!-- <span> 1549.- </span>--></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--  -->
+
+            <section class="new" id="new">
+
+                <h1 class="heading"> New  <span> arrivals</span> </h1>
+            
+                <div class="box-container">
+            
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/sf/n1.jpg" alt="New Product 1">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Pansy</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+            
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/sf/n2.jpg" alt="New Product 2">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Crocus</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+            
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/sf/n3.jpg" alt="New Product 3">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Daisy</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+            
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/sf/n4.jpg" alt="New Product 4">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Eglantine</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+            
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/sf/n5.jpg" alt="New Product 4">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Hellebore</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+            
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/sf/n6.jpg" alt="New Product 4">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Iris</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/sf/n7.jpg" alt="New Product 4">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Lily of the valley</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+            
+                    <div class="box">
+                        <span class="discount">New!</span>
+                        <div class="image">
+                            <img src="images/it8.webp" alt="New Product 4">
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Moss rose</h3>
+                            <div class="price"> 1399.- <span> 1599.- </span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+<section class="flowers" id="flowers">
+
+    <h1 class="heading"> Our <span>Flowers</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images/sf/p1.jpg" alt="Flower Product 1">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Mexican Daisy</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images/sf/p2.1.jpg" alt="Flower Product 2">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Wax flower</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images//sf/p3.jpg" alt="Flower Product 3">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Lisianthus</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images/sf/p4.jpg" alt="Flower Product 4">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Desert rose</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images/sf/p5.jpg" alt="Flower Product 5">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Flame Lily</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images/sf/p6.jpg" alt="Flower Product 6">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Primrose</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images/sf/p8.jpg" alt="Flower Product 7">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Veronica</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">Flower!</span>
+            <div class="image">
+                <img src="images/sf/sf5.1.jpg" alt="Flower Product 8">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Chinese rose</h3>
+                <div class="price"> 999.- <span> 1199.- </span></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- linkk -->
+<section id="products">
+    <a href="#products"></a>
+</section>
+
+<section id="new">
+    <a href="#new"></a>
+</section>
+
+<section id="flowers">
+    <a href="#flowers"></a>
+</section>
+
+<!--  -->
+<footer class="footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>This website was created by Ms. Wanwisa Inthason. This website was created for educational use in creating website media only. There is no intention to use it commercially in any way. Thank you for viewing this website.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Latest Articles</h3>
+                <ul>
+                    <li><a href="#products">Best seller</a></li>
+                    <li><a href="#new">new</a></li>
+                    <li><a href="#flowers">Flowers</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Flower Categories</h3>
+                <ul>
+                    <li><a href="#">Roses</a></li>
+                    <li><a href="#">Tulips</a></li>
+                    <li><a href="#">Lilies</a></li>
+                    <li><a href="#">Orchids</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Subscribe</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="button" onclick="window.location.href='login.html'">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-absolute">
+        <div class="container">
+            <div class="footer-absolute-content">
+                <h3>Flowers</h3>
+                <div class="payment-icons">
+                    <img src="images/icon/icon-pay-01.png" alt="PayPal">
+                    <img src="images/icon/icon-pay-02.png" alt="Visa">
+                    <img src="images/icon/icon-pay-03.png" alt="MasterCard">
+                    <img src="images/icon/icon-pay-04.png" alt="American Express">
+                    <img src="images/icon/icon-pay-05.png" alt="Express">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+        
+    
+
