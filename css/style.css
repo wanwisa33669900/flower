@@ -1,0 +1,1324 @@
+.root{
+    --pink:#e84393;
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline:none; border:none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 1rem 5%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(245, 38, 159, 0.05);
+}
+
+.heading span{
+    color: #FF99CC;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .5rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: var(--pink);
+}
+
+.shop-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #333; /* พื้นหลังสีเทาเข้ม */
+    color: white; /* สีข้อความเป็นสีขาว */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 30px; /* มุมโค้งมนเล็กน้อย */
+    font-size: 1.2rem; /* ขนาดฟอนต์ */
+    font-weight: 500; /* น้ำหนักฟอนต์ปานกลาง */
+    cursor: pointer;
+    text-transform: uppercase; /* ข้อความเป็นตัวพิมพ์ใหญ่ */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* เอฟเฟกต์เปลี่ยนสีและขยายเล็กน้อย */
+}
+
+.shop-btn:hover {
+    background-color: #555; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(1.05); /* ขยายปุ่มเล็กน้อยเมื่อ hover */
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header .icon a{
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem;
+}
+
+header .icon a:hover{
+    color: var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:url(../images/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}   
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .video-container h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+/* ลบขีดเส้นใต้จากทุกแท็ก <a> */
+a {
+    text-decoration: none;
+}
+/* หรือถ้าคุณต้องการลบขีดเส้นใต้เฉพาะในบางส่วน */
+.navbar a, .icons a {
+    text-decoration: none;
+}
+.icons-container {
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: 1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    font: 1 1 25rem;
+    flex: 1 1 calc(25% - 2rem); /* กำหนดความกว้างให้แต่ละ .icons มีขนาดที่เท่ากัน */
+    box-sizing: border-box; /* รวม padding และ border ไว้ในขนาดของ element */
+}
+
+.icons-container .icons img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .icons span {
+    color: #555;
+    font-size: 1.3rem;
+}
+
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0,.1);
+    border-radius: .5rem;
+    /* border: 1rem solid rgba(0, 0, 0, .1); */
+    position: relative;
+}
+
+.products .box-container .box .discount{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: var(--pink);
+    background: rgba(255, 51, 153, .05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2.5rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img{
+    height: 27rem;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem; right: 0; left: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+
+.products .box-container .box .image .icons a{
+    height: 4rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: #f8bbd0;
+    color: #fff;
+
+}
+
+.products .box-container .box .image .icons .cart-btn{
+    border-left: 0.25rem solid #fff7;
+    border-right: 0.25rem solid #fff7;
+    width: 100%;
+}
+
+.products .box-container .box .image .icons a:hover{
+    background: #333;
+}
+
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.products .box-container .box .content .price{
+    font-size: 2.5rem;
+    color: #f8bbd0;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.products .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.review {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.review .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.review .heading span {
+    color: #f39c12;
+}
+
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.review .box {
+    background-color: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    padding: 2rem;
+    flex: 1 1 30rem;
+    position: relative;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 .8rem 1.8rem rgba(0, 0, 0, .2);
+}
+
+.review .stars i {
+    color: #f39c12;
+    margin-right: .5rem;
+}
+
+.review .box p {
+    font-size: 1rem;
+    color: #666;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.review .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.review .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .user-info h3 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.review .user-info span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.review .fas.fa-quote-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+.image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.view-all{
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* กำหนดให้ footer มีความยาวเต็มหน้าจอ */
+.footer {
+    width: 100%;
+}
+
+/* ส่วนของ Footer Main */
+.footer-main {
+    background-color: #fff; /* พื้นหลังสีขาว */
+    color: #333; /* สีข้อความ */
+    padding: 40px 0; /* เพิ่มพื้นที่ข้างใน */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container ของ Footer Main */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* คอลัมน์ของ Footer */
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px; /* ปรับขนาดขั้นต่ำ */
+}
+
+/* หัวข้อของคอลัมน์ */
+.footer-column h3 {
+    border-bottom: 2px solid #FF99CC;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* เนื้อหาของคอลัมน์ */
+.footer-column p {
+    font-size: 14px;
+}
+
+/* ลิสต์ของคอลัมน์ */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ฟอร์มสมัครสมาชิก */
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-form input[type="email"] {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    flex: 1;
+}
+
+.subscribe-form button {
+    background-color: #FFCCCC;
+    color: #333#fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #FF99CC;
+}
+
+/* ส่วนของ Footer Absolute */
+.footer-absolute {
+    background-color: #FFEFD5; /* พื้นหลังสีเทาเข้ม */
+    color: #333; /* สีข้อความ */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Container ของ Footer Absolute */
+.footer-absolute .container {
+    padding: 0 20px;
+}
+
+/* เนื้อหาของ Footer Absolute */
+.footer-absolute-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-absolute-content h3 {
+    margin-bottom: 10px;
+}
+
+/* ไอคอนช่องทางชำระเงิน */
+.payment-icons {
+    margin-top: 10px;
+}
+
+.payment-icons img {
+    width: 40px;
+    height: auto;
+    margin: 0 5px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+.btn-group {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Wrap buttons to the next line on small screens */
+}
+
+.btn-outline-primary {
+    padding: 8px 16px;
+    border: 1px solid #FF99CC;
+    border-radius: 50px; /* Rounded corners */
+    color: #FF99CC;
+    background-color: transparent;
+    font-weight: 500; /* Slightly bold text */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.btn-outline-primary:hover {
+    background-color: #FF99CC;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between input and button */
+    margin-left: 10px; /* Space between the search bar and the buttons */
+}
+
+#search-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 14px; /* Slightly larger text */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+#search-input:focus {
+    border-color: #FF99CC; /* Border color on focus */
+}
+
+#search-button {
+    padding: 8px 16px;
+    background-color: #FF99CC;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 14px; /* Slightly larger text */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+#search-button:hover {
+    background-color: #FF99CC;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+.Best {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.Best .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.Best .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.Best .box {
+    flex: 1 1 calc(25% - 2rem); /* 4 boxes per row, adjust as needed */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+}
+
+.Best .image {
+    position: relative;
+}
+
+.Best .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Best .icons {
+    position: relative;
+    margin-top: 10px; /* Position below the image */
+}
+
+.Best .icons a {
+    margin: 0 0.25px;
+    color: #333;
+    text-decoration: none;
+}
+
+.Best .content {
+    margin-top: 1rem;
+}
+
+.Best .content .price {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.Best .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #dc3545; /* Red color for best sellers */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+
+
+
+.new {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.new .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.new .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.new .box {
+    flex: 1 1 calc(25% - 1.5rem); /* 4 boxes per row, considering the gap */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.new .image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.new .icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.new .icons a {
+    margin: 0 0.25px;
+    color: #333;
+    text-decoration: none;
+}
+
+.new .content {
+    margin-top: 1rem;
+}
+
+.new .content .price {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.new .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #28a745; /* Green color for new arrivals */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.new .box .icons {
+    margin-top: auto; /* Push icons to the bottom */
+}
+
+.flowers {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.flowers {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.flowers .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.flowers .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.flowers .box {
+    flex: 1 1 calc(25% - 1.5rem); /* 4 boxes per row, considering the gap */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.flowers .image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flowers .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flowers .icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.flowers .icons a {
+    margin: 0 0.25px;
+    color: #333;
+    text-decoration: none;
+}
+
+.flowers .content {
+    margin-top: 1rem;
+}
+
+.flowers .content .price {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.flowers .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #28a745; /* Green color for new arrivals */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.flowers .box .icons {
+    margin-top: auto; /* Push icons to the bottom */
+}
+
+/* ----------------------------- */
+
+/* สไตล์สำหรับส่วน search ทั้งหมด */
+.search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s ease;
+}
+
+/* ทำให้ส่วน search แสดงเมื่อมีการใช้งาน */
+.search.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ปุ่มปิด */
+.container-search .btn-hide-modal-search {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.container-search .btn-hide-modal-search img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ฟอร์มค้นหา */
+.Plus {
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Plus button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.Plus .plus-search:before {
+    content: '\f002'; /* ไอคอนค้นหา FontAwesome */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #333;
+}
+
+/* ช่องค้นหา */
+.Plus input.plus3 {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.Plus input.plus3::placeholder {
+    color: #aaa;
+}
+
+/* ทำให้ปุ่มและช่องค้นหาดูมีการโต้ตอบ */
+.Plus button:hover,
+.Plus input.plus3:focus {
+    color: #FF99CC;
+    border-color: #FF99CC;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+/* ปุ่มค้นหา */
+.Plus button {
+    background-color: #FF99CC; /* สีน้ำเงิน */
+    color: #fff; /* สีของตัวอักษร */
+    border: none;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เพิ่ม transition ให้การเปลี่ยนแปลง */
+}
+
+/* ไอคอนค้นหา */
+.Plus .plus-search:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/* เมื่อ hover */
+.Plus button:hover {
+    background-color: #FF99CC; /* สีเมื่อ hover */
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+}
+
+/* ทำให้ปุ่มปิด (close button) ดูสวยงาม */
+.container-search .btn-hide-modal-search {
+    background-color: #FF99CC; /* สีแดง */
+    color: #FF99CC;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* เมื่อ hover ปุ่มปิด */
+.container-search .btn-hide-modal-search:hover {
+    background-color: #FF99CC; /* สีเมื่อ hover */
+    transform: scale(1.1);
+}
+
+.container-search .btn-hide-modal-search img {
+    width: 18px;
+    height: 18px;
+}
+
+/* ปุ่ม Open Search */
+.open-search-btn {
+    margin-top: 2rem;
+    background-color: #333/* สี */
+    color: #FF99CC; /* สีของตัวอักษร */
+    padding: 10px 20px; /* เพิ่มพื้นที่รอบตัวอักษร */
+    font-size: 16px; /* ขนาดของตัวอักษร */
+    border: none; /* เอาเส้นขอบออก */
+    border-radius: 30px; /* ทำให้ขอบมน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อเปลี่ยนแปลง */
+    content: '\f002'; /* ไอคอนค้นหา FontAwesome */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+}
+
+/* เมื่อ hover */
+.open-search-btn:hover {
+    background-color: #FF99CC; /* สีเมื่อ hover */
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+}
+
+/* เมื่อกดคลิกปุ่ม */
+.open-search-btn:active {
+    transform: scale(0.98); /* ลดขนาดลงเล็กน้อยเมื่อคลิก */
+    background-color: #FF99CC; /* สีเข้มขึ้นเมื่อกด */
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* Basic reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Background image */
+.background-image {
+    background-image: url('https://cdn.pixabay.com/photo/2019/05/06/20/23/flowers-4184171_1280.jpg'); /* เปลี่ยนเป็นเส้นทางของคุณเอง */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* ปรับความสูงเป็น 50% ของความสูงของหน้าจอ */
+    position: relative;
+    overflow: hidden; /* ซ่อนส่วนที่เกินออกมาจากความสูงที่กำหนด */
+}
+
+
+
+/* Login container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.3); /* Increased transparency */
+    padding: 2rem;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+    width: 320px; /* Slightly wider */
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(20px); /* Stronger frosted glass effect */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+}
+
+/* Heading styles */
+.login-container h1 {
+    margin-bottom: 1.5rem;
+    color: #333; /* Darker text for contrast */
+    font-size: 1.5rem; /* Larger heading */
+}
+
+/* Form styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Spacing between form elements */
+}
+
+.login-form label {
+    margin: 0;
+    font-weight: bold;
+    color: #555; /* Slightly darker label color */
+}
+
+.login-form input {
+    padding: 0.75rem;
+    border: 1px solid #ccc; /* Lighter border */
+    border-radius: 6px; /* Slightly more rounded corners */
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.login-form input:focus {
+    border-color: #2E8B57; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Focus shadow effect */
+}
+
+.login-form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px; /* Matching rounded corners */
+    background-color: #2E8B57;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.login-form button:hover {
+    background-color: #2E8B57;
+}
+
+
+
+/* ------------------------- */
+
+
+/* สไตล์สำหรับ container */
+.auth-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่างลิงก์ */
+    margin-top: 20px; /* ระยะห่างจากเนื้อหาอื่นๆ ด้านบน */
+  }
+  
+  /* สไตล์สำหรับลิงก์ */
+  .auth-link {
+    text-decoration: none;
+    color: #2E8B57; /* สีฟ้าอ่อน */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .auth-link:hover {
+    color: #2E8B57; /* สีฟ้าเข้มเมื่อ hover */
+    transform: translateY(-3px); /* เคลื่อนที่ขึ้นเมื่อ hover */
+  }
+  
+  .auth-link:active {
+    color: #006400; /* สีฟ้าเข้มกว่าถึงขณะคลิก */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+        
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    selection{
+        padding: 2rem;
+    }
+
+    .home{
+    background-position: left;
+    }
+
+}
+
+@media (max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: 1rem solid rgba(0, 0, 0,.1);
+        clip-path: polygon(0 0, 100% 0; 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~.navbar{
+        clip-path: polygon(0 0, 100% 100%, 100% 100%, 100% 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0,.1) ;
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+}
+
+.heading{
+    font-size: 3rem;
+}
+
